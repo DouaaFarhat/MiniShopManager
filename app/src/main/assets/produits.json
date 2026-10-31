@@ -1,0 +1,9 @@
+{
+  "produits": [
+    {"nom": "Smartphone Android", "prix": 899.0},
+    {"nom": "Casque Bluetooth", "prix": 149.0},
+    {"nom": "Montre connectée", "prix": 199.0},
+    {"nom": "Chargeur USB-C Rapide", "prix": 29.0},
+    {"nom": "Écouteurs sans fil", "prix": 79.0}
+  ]
+}
