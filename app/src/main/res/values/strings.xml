@@ -1,3 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MiniShopManger</string>
+    <string name="app_name">MiniShopManager</string>
+
+    <string-array name="produits">
+        <item>Téléphone</item>
+        <item>Casque Bluetooth</item>
+        <item>Montre connectée</item>
+        <item>Chargeur USB</item>
+        <item>Accessoires</item>
+        <item>Cosmétiques</item>
+    </string-array>
 </resources>

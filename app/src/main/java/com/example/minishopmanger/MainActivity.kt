@@ -1,8 +1,8 @@
 package com.example.minishopmanger
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
+import android.widget.ArrayAdapter
+import android.widget.ListView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
@@ -11,12 +11,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btnNext = findViewById<Button>(R.id.btnNext)
+        val listViewProduits = findViewById<ListView>(R.id.listViewProduits)
 
-        btnNext.setOnClickListener {
-            Toast.makeText(this, "Bienvenue dans MiniShopManager !", Toast.LENGTH_SHORT).show()
-            val intent = Intent(this, ProfileActivity::class.java)
-            startActivity(intent)
+        // Récupération de la liste des produits
+        val produits = resources.getStringArray(R.array.produits)
+
+        // Liaison des données avec le ListView
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, produits)
+        listViewProduits.adapter = adapter
+
+        // Affichage du Toast au clic
+        listViewProduits.setOnItemClickListener { parent, _, position, _ ->
+            val produitSelectionne = parent.getItemAtPosition(position).toString()
+            Toast.makeText(this, "Produit sélectionné : $produitSelectionne", Toast.LENGTH_SHORT).show()
         }
     }
 }
